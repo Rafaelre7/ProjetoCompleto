@@ -1,0 +1,22 @@
+CREATE TABLE LOGIN(
+    COD_USUARIO serial PRIMARY KEY ,
+	NOME_USUARIO VARCHAR (40),
+    EMAIL_LOGIN VARCHAR(30) ,
+    CPF VARCHAR (15),
+    COD_PERFIL INT,
+   	SENHA VARCHAR(30),
+	CONF_SENHA VARCHAR(30)	
+	);
+    
+    insert into login (nome_usuario,email_login,cpf,cod_perfil,senha,conf_senha) 
+    values ('Rafael','rafaelre7@gmail.com','464.285.118-60', 1 , '123456' , '123456');
+    
+    insert into login (nome_usuario,email_login,cpf,cod_perfil,senha,conf_senha) 
+    values ('Teste','teste@gmail.com','111.222.333-44', 2 , '1231312' , '1231312');
+    
+    select l.nome_usuario , l.cpf , pe.cod_perfil from login l 
+    inner join perfil pe on l.cod_perfil = pe.cod_perfil;
+
+ update login set nome_usuario = 'Teste1' , email_login = 'teste@gmail.com', cpf = '111.222.333-45' , 
+    cod_perfil =2 ,senha ='121',conf_senha ='121'
+    where cod_usuario = 2;

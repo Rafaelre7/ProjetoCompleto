@@ -1,0 +1,7 @@
+ CREATE TABLE PERFIL (
+    COD_PERFIL SERIAL PRIMARY KEY ,
+    NOME_PERFIL VARCHAR (40)
+    );
+    
+    insert into perfil (nome_perfil) values ('Administrador');
+	insert into perfil (nome_perfil) values ('Usuario Basico');
